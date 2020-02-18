@@ -1,0 +1,19 @@
+<table class="table table-bordered">
+    <tr>
+        <td>ID</td>
+        <td>Megnevezés</td>
+        <td>Csoport</td>
+        <td>Műveletek</td>
+    </tr>
+    {{#each invArr}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{group}}</td>
+            <td>
+                <button class="btn btn-success">Szerkeszt</button>
+                <button class="btn btn-danger">Töröl</button>
+            </td>
+        </tr>
+    {{/each}}
+</table>
