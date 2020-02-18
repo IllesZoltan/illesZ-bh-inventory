@@ -1,11 +1,15 @@
 <table class="table table-bordered">
-    <tr>
-        <td>ID</td>
-        <td>Megnevezés</td>
-        <td>Csoport</td>
-        <td>Műveletek</td>
-    </tr>
+    <thead class="thead-light">
+        <tr>
+
+            <th>ID</th>
+            <th>Megnevezés</th>
+            <th>Csoport</th>
+            <th>Műveletek</th>
+        </tr>
+    </thead>
     {{#each invArr}}
+    <tbody>
         <tr>
             <td>{{id}}</td>
             <td>{{name}}</td>
@@ -15,5 +19,6 @@
                 <button class="btn btn-danger">Töröl</button>
             </td>
         </tr>
+    </tbody>
     {{/each}}
 </table>
