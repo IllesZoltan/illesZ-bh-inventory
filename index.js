@@ -14,8 +14,11 @@ app.set('view engine', 'handlebars')
 
 let invArr = [{id: 1, name: "Processzor", group: "Számítástechnika"},{id: 2, name: "Processzor", group: "Számítástechnika"},{id: 3, name: "Processzor", group: "Számítástechnika"}]
 
-app.get('/tables', (req,res) => {
-    res.render('table', {invArr})
+app.get('/availables', (req,res) => {
+    res.render('available', {invArr})
+})
+app.get('/products', (req,res) => {
+    res.render('product', {invArr})
 })
 app.get('/groups', (req,res) => {
     res.render('group')
