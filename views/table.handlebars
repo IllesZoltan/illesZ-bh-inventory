@@ -1,8 +1,10 @@
+<div class="container">
+
 <table class="table table-bordered">
     <thead class="thead-light">
         <tr>
 
-            <th>ID</th>
+            <th class="text-center">ID</th>
             <th>Megnevezés</th>
             <th>Csoport</th>
             <th>Műveletek</th>
@@ -11,14 +13,18 @@
     {{#each invArr}}
     <tbody>
         <tr>
-            <td>{{id}}</td>
+            <td class="text-center">{{id}}</td>
             <td>{{name}}</td>
             <td>{{group}}</td>
-            <td>
+            <td class="text-center">
                 <button class="btn btn-success">Szerkeszt</button>
-                <button class="btn btn-danger">Töröl</button>
+                <button class="btn btn-danger pl-3">Töröl</button>
             </td>
         </tr>
     </tbody>
     {{/each}}
 </table>
+</div>
+<div class="text-right align-bottom pt-5" style="height: 100px;">
+    <button class="btn btn-info">Új üzenet</button>
+</div>

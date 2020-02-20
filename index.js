@@ -2,7 +2,8 @@ const express = require('express');
 const hdlbrs = require('express-handlebars');
 const bodyparser = require('body-parser')
 const app = express();
-const port = 4000;
+const url = 'http://localhost:4000'
+const port =process.env.port || 4000;
 
 app.use(bodyparser.urlencoded({extended: false}))
 app.use(express.json())
@@ -15,6 +16,9 @@ let invArr = [{id: 1, name: "Processzor", group: "Számítástechnika"},{id: 2, 
 
 app.get('/tables', (req,res) => {
     res.render('table', {invArr})
+})
+app.get('/groups', (req,res) => {
+    res.render('group')
 })
 
 
